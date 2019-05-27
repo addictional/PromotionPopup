@@ -1,0 +1,173 @@
+$black : #1A1A1A;
+$grey : #F2F2F2;
+$orange : #F76205;
+
+@mixin alignCenter{
+  margin: auto auto;
+}
+
+.promotion-popup {
+  @include  alignCenter();
+  width : 650px;
+  height: 447px;
+  background-color: transparent;
+  @media screen and (max-width: 650px){
+    width:100%;
+  }
+    .flexim
+    {
+      display: flex;
+      width: 650px;
+      height: 350px;
+      @media screen and (max-width: 650px){
+        width:100%;
+        height: 250px;
+      }
+      .area1 {
+        background-image: url("/test/build/promotionpop.png");
+        width: 233px;
+        height: 350px;
+        @media screen and (max-width: 650px){
+          display: none;
+          width:100%;
+          height: 250px;
+
+        }
+      }
+      .area2 {
+        width: 417px;
+        height: 350px;
+        background: #ffffff;
+        position: relative;
+        a.promotion-popup-close{
+          position: absolute;
+          top: 2%;
+          right: 4%;
+          font-size: 31px;
+        }
+        h3{
+          font-family: Prata;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 30px;
+          line-height: 41px;
+          margin: 70px 0 0 40px;
+          width: 87px;
+        }
+        p.big-pig {
+          width: 337px;
+          font-size: 16px !important;
+          line-height: 19px;
+          letter-spacing: 0.03em;
+          color: $black;
+          margin: 10px 0 55px 40px;
+        }
+        button {
+          width: 337px;
+          height: 48px;
+          background: $black;
+          margin: 0 0 0 40px;
+          color: #ffffff;
+          border: none;
+          text-transform: uppercase;
+          font-size: 13px;
+          line-height: 16px;
+          letter-spacing: 0.15em;
+        }
+        button.done{
+          background-color: $orange;
+        }
+        p.little-pig{
+          margin: 10px 0 10px 40px;
+          width: 337px;
+          font-size: 12px !important;
+          line-height: 15px;
+          letter-spacing: 0.03em;
+          color: #4F4F4F;
+        }
+        a.more-detail {
+          margin: 0 0 0 40px;
+        }
+        svg{
+          transition: transform 300ms ease-in-out;
+        }
+        svg.rotation{
+          transform: rotate(180deg);
+        }
+        @media screen and (max-width: 650px){
+          width:100%;
+          height: 250px;
+          button{
+            margin: 0 0 0 6px;
+            padding: 0;
+          }
+          h3 {
+            margin: 17px 0 0 6px;
+          }
+          p.big-pig {
+            margin: 10px 0 13px 6px;
+          }
+          p.little-pig {
+            margin: 10px 0 10px 6px;
+          }
+          a.more-detail {
+            margin: 0 0 0 6px;
+          }
+          a.promotion-popup-close{
+            display: none;
+          }
+        }
+      }
+    }
+    .area3{
+      width: 650px;
+      height: 97px;
+      background: $grey;
+      ul{
+        margin: 0 0 16px 40px;
+        padding: 15px 0 0 0;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        color: #4F4F4F;
+      }
+      @media screen and (max-width: 650px){
+        width:100%;
+        ul{
+          margin: 0 0 16px 18px;
+          padding: 8px 0 0 0;
+          font-size: 9px;
+          line-height: 14px;
+        }
+      }
+    }
+}
+.time-left{
+  width: 177px;
+  height: 50px;
+  background-color: $black;
+  position: fixed;
+  z-index: 1000;
+  top: 92%;
+  right: 2%;
+  border-radius: 40px;
+  color: #ffffff;
+  p {
+    margin: 0;
+  }
+  .text-time-left{
+    margin: 8px 30px 0 30px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    position: static;
+    color: #ffffff;
+    font: 100 12px/14px sans-serif;
+  }
+  .digit-time-left{
+    margin: 2px 30px 0 99px;
+    position: static;
+    color: #ffffff;
+    font: 100 12px/14px sans-serif;
+  }
+}
