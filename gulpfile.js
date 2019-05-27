@@ -5,11 +5,13 @@ const rename = require('gulp-rename');
 const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass');
 const minifyCss = require('gulp-clean-css');
+var browserify = require('gulp-browserify');
 
 sass.compiler = require('node-sass');
 
 gulp.task('es6',()=> {
     return gulp.src('src/app.js')
+        .pipe(browserify())
         .pipe(rename('app.min.js'))
         .pipe(babel({
             presets: ["@babel/preset-env"]
